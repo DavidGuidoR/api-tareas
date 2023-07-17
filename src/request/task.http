@@ -1,0 +1,15 @@
+###
+GET http://localhost:3000/api/task
+###
+
+POST http://localhost:3000/api/task HTTP/1.1
+//para enviar un dato se debe especificar una cabecera del tipo de dato a enviar
+//mediante el content type indicamos que se enviara un objeto JSON.
+Content-Type: application/json
+//escribimos el objeto que vamos a estar enviando, debemos dejar un espacio vacio
+
+{
+    "title": "Hacer un sitio web en wordpress",
+    "description": "trabajo freelance"
+}
+
