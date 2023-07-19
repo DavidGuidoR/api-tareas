@@ -9,7 +9,24 @@ Content-Type: application/json
 //escribimos el objeto que vamos a estar enviando, debemos dejar un espacio vacio
 
 {
-    "title": "Hacer un sitio web en wordpress",
-    "description": "trabajo freelance"
+    "title": "Hacer un sitio web en Angular",
+    "description": "trabajo freelance",
+    "done": true
 }
 
+###
+GET http://localhost:3000/api/task/64b73c3516cf89e5b991b78d
+
+###
+DELETE http://localhost:3000/api/task/64b73c3516cf89e5b991b78d
+
+###
+GET http://localhost:3000/api/task/done
+
+###
+PUT http://localhost:3000/api/task/64b74b57d7e3d1ee67bb8cf9
+Content-Type: application/json
+
+{
+    "title": "Hacer un sitio web en angular"
+}

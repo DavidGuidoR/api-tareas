@@ -4,5 +4,6 @@ import app from './app';
 import './database';
 
 //arranque de la aplicación en el puerto indicado en app
-app.listen(app.get('port'))
+app.listen(app.get('port'));
+
 console.log('Server on port', app.get('port'));
