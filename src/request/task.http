@@ -1,7 +1,10 @@
 ###
 GET http://localhost:3000/api/task
 ###
+//De esta manera pidemos especificar el tamaño de la paginacion y la pagina empieza en 0
+GET http://localhost:3000/api/task?page=0&size=3
 
+###
 POST http://localhost:3000/api/task HTTP/1.1
 //para enviar un dato se debe especificar una cabecera del tipo de dato a enviar
 //mediante el content type indicamos que se enviara un objeto JSON.
@@ -9,13 +12,13 @@ Content-Type: application/json
 //escribimos el objeto que vamos a estar enviando, debemos dejar un espacio vacio
 
 {
-    "title": "Hacer un sitio web en Angular",
+    "title": "Hacer un sitio web en Ensamblador",
     "description": "trabajo freelance",
     "done": true
 }
 
 ###
-GET http://localhost:3000/api/task/64b73c3516cf89e5b991b78d
+GET http://localhost:3000/api/task/64b73c3516cf89e5b991b78a
 
 ###
 DELETE http://localhost:3000/api/task/64b73c3516cf89e5b991b78d
