@@ -14,7 +14,8 @@ export const findAllTasks = async (req,res) => {
         } : {};
 
     const {limit, offset} = getPagination(page, size)
-    //el async y await se deben usar cuando la tarea o consulta toma tiempo y se desea que se espere a la terminacion de la misma para enviar la respuesta
+    //el async y await se deben usar cuando la tarea o consulta toma tiempo y se desea 
+    //que se espere a la terminación de la misma para enviar la respuesta
     const data = await Task.paginate(condition, {offset, limit});
     res.json({
         totalItems: data.totalDocs,
@@ -35,7 +36,8 @@ export const createTask = async (req,res) =>{
     const newTask = new Task({
         title: req.body.title,
         description: req.body.description,
-        //mediante el ? decimos que si existe genere la siguiente instruccion y con el : en caso de que no exista la siguiente instrucción
+        //mediante el ? decimos que si existe genere la siguiente instrucción y
+        // con el : en caso de que no exista la siguiente instrucción
         done: req.body ? req.body.done : false
     });
     //el .save permite guardar la tarea dentro de la base de datos  

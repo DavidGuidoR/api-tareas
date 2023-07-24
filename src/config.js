@@ -2,6 +2,6 @@ import {config} from 'dotenv'
 config();
 
 export default{
-    //Definimos la importacion del nombre de la conexion
+    //Definimos la importación del nombre de la conexión
     mongodbURL: process.env.MONGODB_URI || 'mongodb://localhost/tasksdb',
 };
