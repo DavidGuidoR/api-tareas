@@ -1,4 +1,3 @@
 node_modules
 #enviroment variables
 .env
-dist
